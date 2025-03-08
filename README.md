@@ -17,6 +17,7 @@ For detailed information about LoopFeed, please see:
 - [User Roles](./USER_ROLES.md) - Core user roles - specific interactions, permissions, and features
 - [Metrics & Goals](./METRICS_AND_GOALS.md) - Core success metrics & goals for LoopFeed
 - [Key Problems](./KEY_PROBLEMS.md) - Core pain points or issues that LoopFeed attempts to solve
+- [Business Impact](./BUSINESS_IMPACT.md) - Core business impact of LoopFeed
 
 ## Development
 
