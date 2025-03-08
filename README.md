@@ -14,8 +14,8 @@ LoopFeed bridges the gap between customers and sellers in the e-commerce ecosyst
 For detailed information about LoopFeed, please see:
 
 - [Vision and Purpose](./VISION.md) - Core objectives and the problem LoopFeed solves
-- [User Roles](./USER_ROLES.md) - Core user roles - specific interactions, permissions, and features.
-
+- [User Roles](./USER_ROLES.md) - Core user roles - specific interactions, permissions, and features
+- [Metrics & Goals](./METRICS_AND_GOALS.md) - Core success metrics & goals for LoopFeed
 
 ## Development
 
