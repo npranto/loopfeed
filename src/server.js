@@ -7,14 +7,9 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { getPackageJson } from './utils/getPackageJson.js';
 
-// Read package.json manually
-const pkgJson = JSON.parse(
-  readFileSync(join(process.cwd(), 'package.json'), 'utf8')
-);
-
+const pkgJson = getPackageJson();
 const PORT = process.env.PORT || 3000;
 const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
 
