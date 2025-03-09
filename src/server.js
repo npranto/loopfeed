@@ -1,24 +1,30 @@
 import dotenv from 'dotenv';
 dotenv.config({
   path: process.env.NODE_ENV === 'development' ? '.env.local' : '.env',
-})
+});
 
-import express from 'express'
-import cors from 'cors'
-import helmet from 'helmet'
-import morgan from 'morgan'
-import pkgJson from '../package.json' with { "type": 'json' }; 
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-const PORT = process.env.PORT || 3000
-const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev'
+// Read package.json manually
+const pkgJson = JSON.parse(
+  readFileSync(join(process.cwd(), 'package.json'), 'utf8')
+);
 
-const app = express()
+const PORT = process.env.PORT || 3000;
+const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
+
+const app = express();
 
 // middlewares
-app.use(cors())
-app.use(helmet())
-app.use(morgan(logFormat))
-app.use(express.json())
+app.use(cors());
+app.use(helmet());
+app.use(morgan(logFormat));
+app.use(express.json());
 
 // routes
 app.get('/api/healthcheck', (_, res) => {
@@ -29,9 +35,11 @@ app.get('/api/healthcheck', (_, res) => {
     uptime: process.uptime(),
     environment: process.env.NODE_ENV,
     status: 'OK',
-  })
-})
+  });
+});
 
-app.listen(3000, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT} | ENV: ${process.env.NODE_ENV}`)
-})
+app.listen(PORT, () => {
+  console.warn(
+    `🚀 Server running on http://localhost:${PORT} | ENV: ${process.env.NODE_ENV}`
+  );
+});
