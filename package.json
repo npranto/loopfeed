@@ -1,0 +1,40 @@
+{
+  "name": "loopfeed",
+  "version": "0.0.1",
+  "description": "A smart feedback platform that helps businesses improve product quality and delivery through real customer insights.",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node ./index.js",
+    "start": "NODE_ENV=production node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npranto/loopfeed.git"
+  },
+  "keywords": [
+    "rest-api",
+    "express.js",
+    "loopfeed",
+    "api"
+  ],
+  "author": "Nazmuz Pranto <npranto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/npranto/loopfeed/issues"
+  },
+  "homepage": "https://github.com/npranto/loopfeed#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
+  }
+}
