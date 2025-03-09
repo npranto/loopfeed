@@ -19,7 +19,9 @@ For detailed information about LoopFeed, please see:
 - [Key Problems](./docs/KEY_PROBLEMS.md) - Core pain points or issues that LoopFeed attempts to solve
 - [Business Impact](./docs/BUSINESS_IMPACT.md) - Core business impact of LoopFeed
 - [Customer Access and Feedback](./docs/BUSINESS_IMPACT.md) - How customers would interacts and access feedback forms via LoopFeed
-
+- [Site Map](./docs/SITE_MAP.png) - Initial site map for MVP for LoopFeed
+- [Page Routes](./docs/PAGE_ROUTES.png) - Initial page routes for MVP for LoopFeed
+- [API Endpoints](./docs/API_ENDPOINTS.png) - Initial list of API endpoints for MVP for LoopFeed
 
 ## Development
 
