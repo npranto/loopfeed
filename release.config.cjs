@@ -6,9 +6,8 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         releaseRules: [
-          { subject: /\[MAJOR\]/i, release: 'major' },
-          { subject: /\[MINOR\]/i, release: 'minor' },
-          { subject: /\[PATCH\]/i, release: 'patch' },
+          { type: 'minor', release: 'minor' },
+          { type: 'major', release: 'major' },
           { release: 'patch' }, // default: every PR merged bumps patch version
         ],
       },
