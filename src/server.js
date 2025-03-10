@@ -10,7 +10,6 @@ import morgan from 'morgan';
 import { getPackageJson } from './utils/getPackageJson.js';
 
 const pkgJson = getPackageJson();
-const PORT = process.env.PORT || 3000;
 const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
 
 const app = express();
@@ -33,8 +32,4 @@ app.get('/api/healthcheck', (_, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.warn(
-    `🚀 Server running on http://localhost:${PORT} | ENV: ${process.env.NODE_ENV}`
-  );
-});
+export default app;
