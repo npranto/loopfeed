@@ -1,0 +1,30 @@
+name: Bump Version + Generate Changelog + Create Tag
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  versioning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js (Latest LTS)
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm install --no-fund --no-audit
+      - name: Run semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Skip duplicate workflow runs
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          concurrent_skipping: true
