@@ -6,10 +6,10 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         releaseRules: [
-          { release: 'patch' }, // default: every PR merged bumps patch version
-          { subject: /\[PATCH\]/i, release: 'patch' },
-          { subject: /\[MINOR\]/i, release: 'minor' },
           { subject: /\[MAJOR\]/i, release: 'major' },
+          { subject: /\[MINOR\]/i, release: 'minor' },
+          { subject: /\[PATCH\]/i, release: 'patch' },
+          { release: 'patch' }, // default: every PR merged bumps patch version
         ],
       },
     ],
