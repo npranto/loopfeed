@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/npranto/loopfeed/compare/v1.0.5...v1.0.6) (2025-03-10)
+
+
+### Features
+
+* testing minor update ([3c6ccd1](https://github.com/npranto/loopfeed/commit/3c6ccd1f34fd509138b5234504bb5e588a4394d9))
+
 ## [1.0.5](https://github.com/npranto/loopfeed/compare/v1.0.4...v1.0.5) (2025-03-10)
 
 
