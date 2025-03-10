@@ -6,10 +6,10 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         releaseRules: [
-          { release: 'patch' }, // Default: PR merged to `master` bumps patch version
-          { subject: /\[PATCH\]/, release: 'patch' },
-          { subject: /\[MINOR\]/, release: 'minor' },
-          { subject: /\[MAJOR\]/, release: 'major' },
+          { release: 'patch' }, // default: every PR merged bumps patch version
+          { subject: /\[PATCH\]/i, release: 'patch' },
+          { subject: /\[MINOR\]/i, release: 'minor' },
+          { subject: /\[MAJOR\]/i, release: 'major' },
         ],
       },
     ],
@@ -19,13 +19,8 @@ module.exports = {
     [
       '@semantic-release/git',
       {
-        assets: ['package.json', 'CHANGELOG.md'],
-        message:
-          '🚀 Release ${nextRelease.version}\n\n' +
-          '🔹 Summary:\n${nextRelease.notes}\n\n' +
-          '📌 Changes:\n- Auto-generated release by Semantic Release\n' +
-          '- Version bump based on merged PRs\n\n' +
-          '🔖 Tag: v${nextRelease.version}\n\n[skip ci]',
+        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
+        message: '🚀 Release v${nextRelease.version} 🔖 [skip ci]',
       },
     ],
   ],
