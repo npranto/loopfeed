@@ -1,6 +1,6 @@
 {
   "name": "loopfeed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A smart feedback platform that helps businesses improve product quality and delivery through real customer insights.",
   "main": "index.js",
   "private": true,
