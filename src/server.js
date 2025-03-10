@@ -3,7 +3,7 @@ dotenv.config({
   path: process.env.NODE_ENV === 'development' ? '.env.local' : '.env',
 });
 
-console.log('Test: Minor Update again 3...');
+console.log('Test: Minor Update again 4...');
 
 import express from 'express';
 import cors from 'cors';
