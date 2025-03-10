@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/npranto/loopfeed/compare/v1.0.1...v1.0.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* updates config for semantic release + updates versioning gh action ([c31752a](https://github.com/npranto/loopfeed/commit/c31752a7d13e258e1624c377b5d7ec1fd3ffb1af))
+
 ## [1.0.1](https://github.com/npranto/loopfeed/compare/v1.0.0...v1.0.1) (2025-03-10)
 
 # 1.0.0 (2025-03-10)
