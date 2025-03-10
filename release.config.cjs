@@ -1,5 +1,5 @@
 module.exports = {
-  branches: ['master', 'feat/39-auto-bump-package-version'],
+  branches: ['master'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
